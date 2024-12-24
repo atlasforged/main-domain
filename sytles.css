@@ -1,0 +1,272 @@
+:root {
+	/* COLORS */
+	--primary-color: #0a85ed;
+	--secondary-color: #d580ff;
+	--main-shadow: #0c63e7;
+	--background-color: #0d1117;
+	--text-color: #c9d1d9;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style-type: none;
+	text-decoration: none;
+}
+
+body {
+	background-color: var(--background-color);
+	color: var(--text-color);
+	font-family: 'Fira Code', monospace;
+}
+
+.container {
+	padding: 16px;
+	width: 80%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.nav {
+	display: flex;
+	justify-content: flex-end;
+	font-size: 1.2rem;
+	padding: 8px;
+	gap: 10px;
+}
+
+.nav-text {
+	color: var(--secondary-color);
+	text-shadow: 0 0 5px var(--secondary-color);
+	font-weight: 600;
+}
+
+.nav-text:hover {
+	transform: scale(1.1);
+	filter: drop-shadow(4px 4px 12px #d78bfd);
+	transition: transform 0.22s ease, filter 0.22s ease;
+}
+
+.hero {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.text {
+	color: var(--primary-color);
+	text-shadow: 0 0 6px var(--main-shadow);
+	padding-bottom: 1rem;
+}
+
+.comment {
+	color: #6a737d;
+	font-style: italic;
+	margin-bottom: 1rem;
+}
+
+.bio-title {
+	font-size: larger;
+}
+
+.variable,
+.property {
+	color: #79c0ff;
+	font-weight: 600;
+}
+
+.string {
+	color: #a5d6ff;
+}
+
+.brace {
+	color: var(--secondary-color);
+}
+
+.indent {
+	padding-left: 2rem;
+}
+
+h3 {
+	text-align: center;
+	font-size: 1.5rem;
+	color: #a5d6ff;
+	text-shadow: 0 0 8px #79c0ff;
+	border-bottom: 1px solid #79c0ff;
+	display: inline-block;
+	margin: 0 auto;
+	padding-bottom: 0.5rem;
+}
+
+.skills svg {
+	margin: 0.5rem;
+}
+
+.skill-outline {
+	border: 1px solid #79c0ff;
+	border-radius: 8px;
+	padding: 0.5rem;
+	margin: auto;
+	width: fit-content;
+	height: fit-content;
+	background: linear-gradient(
+		135deg,
+		rgba(10, 133, 237, 0.1),
+		rgba(0, 0, 0, 0)
+	);
+}
+
+.skills {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	gap: 1rem;
+	width: 100%;
+	text-align: center;
+}
+
+svg {
+	filter: drop-shadow(2px 2px 8px var(--main-shadow));
+}
+
+svg:hover {
+	transform: scale(1.1);
+	filter: drop-shadow(4px 4px 12px #0d90ff);
+	transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.icon {
+	fill: var(--primary-color);
+	text-shadow: 0 0 6px var(--main-shadow);
+}
+
+.tooltip {
+	position: relative;
+	display: inline-block;
+}
+
+.tooltip-text {
+	visibility: hidden;
+	width: auto;
+	background-color: var(--primary-color);
+	color: #c9d1d9;
+	text-align: center;
+	border-radius: 4px;
+	padding: 0.5rem;
+	position: absolute;
+	z-index: 1;
+	bottom: 125%;
+	left: 50%;
+	transform: translateX(-50%);
+	opacity: 0;
+	transition: opacity 0.2s ease;
+}
+
+.tooltip:hover .tooltip-text {
+	visibility: visible;
+	opacity: 1;
+}
+
+.skills svg {
+	width: 100%;
+	max-width: 120px;
+	height: auto;
+	margin: auto;
+}
+
+@media (max-width: 500px) {
+	.skills {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+/* CONTACT SECTION AND FOOTER */
+
+.contact-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 48px;
+}
+
+.contact-title {
+	color: var(--primary-color);
+	text-shadow: 0 0 6px var(--primary-color);
+	font-size: 1.5rem;
+	padding-bottom: 1rem;
+}
+
+form {
+	background: #0f1623;
+	border: 1px solid var(--primary-color);
+	border-radius: 8px;
+	max-width: 500px;
+	width: 100%;
+	padding: 25px;
+	margin: 0 auto;
+}
+
+input,
+textarea,
+button {
+	background: #0d1117;
+	color: var(--text-color);
+	border: 1px solid var(--primary-color);
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 20px;
+	border-radius: 8px;
+	padding: 1rem;
+	outline: none;
+	box-sizing: border-box;
+}
+
+textarea {
+	resize: none;
+}
+
+::placeholder {
+	color: #666;
+	font-family: 'Fira Code', monospace;
+}
+
+.contact-button {
+	text-align: center;
+}
+button {
+	font-family: 'Fira Code', monospace;
+	width: 90%;
+	padding: 10px;
+	border: none;
+	background: var(--primary-color);
+	box-shadow: 0 0 10px var(--primary-color);
+	color: #fff;
+	font-size: 18px;
+	font-weight: 600;
+	color: #fff;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+button:hover {
+	transform: scale(1.1);
+	background: #0c7ad6;
+	box-shadow: 0 0 15px #0c7ad6;
+}
+
+.footer {
+	width: 100%;
+	padding: 8px;
+	text-align: center;
+}
+
+/* Feedback */
+.feedback-message {
+	margin-top: 10px;
+	font-size: 14px;
+	color: green;
+}
+
+#error-message {
+	color: red;
+}
