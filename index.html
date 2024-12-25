@@ -11,7 +11,7 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="./styles.css" />
-		<script src="./main.js?v=1.0" async></script>
+		<script src="./main.js?v=1.1" async></script>
 	</head>
 	<body>
 		<div class="container">
@@ -162,11 +162,15 @@
 							placeholder="Name"
 							required
 						/>
-						<input type="text" name="name" placeholder="Email" required />
+						<input type="text" name="email" placeholder="Email" required />
 					</div>
 					<p></p>
 					<div>
-						<textarea rows="4" placeholder="Drop me a line!"></textarea>
+						<textarea
+							id="textarea"
+							rows="4"
+							placeholder="Drop me a line!"
+						></textarea>
 					</div>
 					<!-- Honeypot -->
 					<input type="text" name="_gotcha" style="display: none" />

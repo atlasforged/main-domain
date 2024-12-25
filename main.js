@@ -1,9 +1,34 @@
+// document.addEventListener('DOMContentLoaded', () => {
+// 	const typedElement = document.querySelector('.typed-out');
+// 	const typedText = '"Web Developer"';
+// 	let index = 0;
+
+// 	function typeEffect() {
+// 		if (index <= typedText.length) {
+// 			typedElement.innerText = typedText.substring(0, index) + '|';
+// 			index++;
+// 			setTimeout(typeEffect, 100);
+// 		} else {
+// 			typedElement.innerText = typedText; // Persistent Text
+// 		}
+// 	}
+// 	typeEffect();
+
+// DEBUGGING ISSUE WITH DEPLOYED SITE
 document.addEventListener('DOMContentLoaded', () => {
 	const typedElement = document.querySelector('.typed-out');
+	console.log('Typed element:', typedElement);
+
+	if (!typedElement) {
+		console.error('Typed-out element is not found in the DOM!');
+		return;
+	}
+
 	const typedText = '"Web Developer"';
 	let index = 0;
 
 	function typeEffect() {
+		console.log('Typing at index:', index);
 		if (index <= typedText.length) {
 			typedElement.innerText = typedText.substring(0, index) + '|';
 			index++;
@@ -12,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			typedElement.innerText = typedText; // Persistent Text
 		}
 	}
+
 	typeEffect();
 
 	const form = document.getElementById('contact-form');
