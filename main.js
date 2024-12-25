@@ -70,3 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	});
 });
+
+// GLOBAL DEBUGGING TEST
+console.log('JavaScript file loaded and executing.');
