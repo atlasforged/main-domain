@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+	var date = new Date().getFullYear();
+	document.getElementById('year').innerHTML = date;
+
 	const typedElement = document.querySelector('.typed-out');
 	const typedText = '"Web Developer"';
 	let index = 0;
