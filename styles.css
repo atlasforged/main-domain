@@ -3,7 +3,8 @@
 	--primary-color: #0a85ed;
 	--secondary-color: #d580ff;
 	--main-shadow: #0c63e7;
-	--background-color: #0d1117;
+	/* --background-color: #0d1117; */
+	--background-color: #241a44;
 	--text-color: #c9d1d9;
 }
 
@@ -23,7 +24,7 @@ body {
 
 .container {
 	padding: 16px;
-	width: 80%;
+	width: 70%;
 	margin: auto;
 	display: flex;
 	flex-direction: column;
@@ -33,13 +34,14 @@ body {
 	display: flex;
 	justify-content: flex-end;
 	font-size: 1.2rem;
-	padding: 18px 26px 4px;
+	padding: 24px 28px 4px;
 	gap: 10px;
 }
 
 .nav-text {
-	color: var(--secondary-color);
-	text-shadow: 0 0 5px var(--secondary-color);
+	color: #79c0ff;
+	/* color: var(--secondary-color); */
+	/* text-shadow: 0 0 5px var(--secondary-color); */
 	font-weight: 600;
 }
 
@@ -52,13 +54,17 @@ body {
 .hero {
 	display: flex;
 	flex-direction: column;
-	gap: 2rem;
+	gap: 1.5rem;
 }
 
 .text {
 	color: var(--primary-color);
-	text-shadow: 0 0 6px var(--main-shadow);
+	/* text-shadow: 0 0 6px var(--main-shadow); */
 	padding-bottom: 1rem;
+}
+
+.glow {
+	text-shadow: 0 0 6px var(--main-shadow);
 }
 
 .comment {
@@ -68,7 +74,13 @@ body {
 }
 
 .bio-title {
-	font-size: larger;
+	font-size: x-large;
+	font-weight: 600;
+}
+
+.colon {
+	font-size: x-large;
+	font-weight: 600;
 }
 
 .variable,
@@ -78,7 +90,8 @@ body {
 }
 
 .string {
-	color: #a5d6ff;
+	/* color: #a5d6ff; */
+	color: #06cfce;
 }
 
 .brace {
@@ -89,21 +102,27 @@ body {
 	padding-left: 2rem;
 }
 
-.atlas {
-	color: var(--secondary-color);
-	text-shadow: 0 0 6px var(--secondary-color);
+.bio-text {
 	font-weight: 600;
+}
+
+.atlas {
+	/* color: #79c0ff; */
+	color: var(--secondary-color);
+	/* text-shadow: 0 0 6px var(--secondary-color); */
+	font-weight: 600;
+	font-size: 1.1rem;
 }
 
 h3 {
 	text-align: center;
 	font-size: 1.5rem;
-	color: #a5d6ff;
-	text-shadow: 0 0 8px #79c0ff;
-	border-bottom: 1px solid #79c0ff;
+	color: #79c0ff;
+	/* text-shadow: 0 0 8px #79c0ff; */
+	border-bottom: 3px solid #79c0ff;
 	display: inline-block;
 	margin: 0 auto;
-	padding-bottom: 0.5rem;
+	padding-bottom: 0.3rem;
 }
 
 .skills svg {
@@ -111,9 +130,10 @@ h3 {
 }
 
 .skill-outline {
-	border: 1px solid #79c0ff;
+	border: 3px solid #79c0ff;
 	border-radius: 8px;
-	padding: 0.5rem;
+	padding: 0.7rem;
+	padding-bottom: 0.1rem;
 	margin: auto;
 	width: fit-content;
 	height: fit-content;
@@ -137,6 +157,7 @@ h3 {
 
 svg {
 	filter: drop-shadow(2px 2px 8px var(--main-shadow));
+	/* filter: drop-shadow(2px 2px 8px #79c0ff); */
 }
 
 svg:hover {
@@ -146,7 +167,8 @@ svg:hover {
 }
 
 .icon {
-	fill: var(--primary-color);
+	/* fill: var(--primary-color); */
+	fill: #79c0ff;
 	text-shadow: 0 0 6px var(--main-shadow);
 }
 
@@ -194,15 +216,16 @@ svg:hover {
 }
 
 .contact-title {
-	color: var(--primary-color);
-	text-shadow: 0 0 6px var(--primary-color);
-	font-size: 1.5rem;
+	/* color: var(--primary-color); */
+	color: #79c0ff;
+	/* text-shadow: 0 0 6px var(--primary-color); */
+	font-size: 1.6rem;
 	padding-bottom: 1rem;
 }
 
 form {
-	background: #0f1623;
-	border: 1px solid var(--primary-color);
+	background: var(--background-color);
+	border: 3px solid var(--primary-color);
 	border-radius: 8px;
 	max-width: 500px;
 	width: 100%;
@@ -211,10 +234,10 @@ form {
 }
 
 input,
-textarea,
-button {
-	background: #0d1117;
-	color: var(--text-color);
+textarea {
+	/* background: hsl(216, 28%, 7%); */
+	background-color: hsl(240, 30%, 15%);
+	color: hsl(220, 50%, 85%);
 	border: 1px solid var(--primary-color);
 	width: 100%;
 	padding: 10px;
@@ -223,6 +246,14 @@ button {
 	padding: 1rem;
 	outline: none;
 	box-sizing: border-box;
+	font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+	outline: none;
+	border-color: hsl(220, 100%, 70%);
+	box-shadow: 0 0 10px hsl(220, 100%, 50%);
 }
 
 textarea {
@@ -244,10 +275,9 @@ button {
 	border: none;
 	background: var(--primary-color);
 	box-shadow: 0 0 10px var(--primary-color);
-	color: #fff;
+	color: var(--text-color);
 	font-size: 18px;
 	font-weight: 600;
-	color: #fff;
 	cursor: pointer;
 	transition: all 0.3s ease-in-out;
 }
@@ -261,6 +291,10 @@ button:hover {
 	width: 100%;
 	padding: 8px;
 	text-align: center;
+}
+
+.footer.string {
+	color: var(--primary-color);
 }
 
 /* Feedback */
@@ -278,6 +312,7 @@ button:hover {
 @media (max-width: 768px) {
 	.container {
 		padding: 16px 8px;
+		width: 85%;
 	}
 
 	.hero {
@@ -309,6 +344,9 @@ button:hover {
 }
 
 @media (max-width: 500px) {
+	.container {
+		width: 95%;
+	}
 	.skills {
 		grid-template-columns: repeat(2, 1fr);
 		gap: 0.5rem;
