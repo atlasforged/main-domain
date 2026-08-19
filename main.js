@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	document.getElementById('year').innerHTML = date;
 
 	const typedElement = document.querySelector('.typed-out');
-	const typedText = '"Web Developer"';
+	const typedText = '"Developer & CS Student"';
 	let index = 0;
 
 	function typeEffect() {
